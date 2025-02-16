@@ -46,9 +46,12 @@ unrawheel.setSections(data);
 
 let counter = 0;
 
+// * Note: this event fires when the user selects a section
 unrawheel.addEventListener('section-select', (e) => {
+   // * Note: this is the selected value
    console.log(e.detail.value);
 
+   // I was too lazy to make actual test data, hence the mess here
    counter += e.detail.value === -1 ? -1 : 1;
    if (counter === -1) counter = 0;
 
