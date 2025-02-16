@@ -1,0 +1,4 @@
+- [ ] option: don't show texts (note: must still be defined for aria labels!)
+- [ ] improve dynamic segment count functionality
+  - [ ] pointer shouldn't go flying
+- [ ] create addStylesheet or similar to allow override of default #CSS

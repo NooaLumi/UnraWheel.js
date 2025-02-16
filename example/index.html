@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>UnraWheel Demo</title>
+      <style>
+         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #EEE;
+            font-family: 'Roboto';
+            font-size: 1.1rem;
+         }
+
+         .info {
+            position: absolute;
+            top: 10vh;
+            z-index: -1;
+            padding: 0 1rem;
+         }
+
+         h1 {
+            font-weight: 500;
+            text-align: center;
+         }
+
+         .wheel-container {
+            width: max(50vmin, 500px);
+            height: max(50vmin, 500px);
+         }
+      </style>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
+
+      <script type="module" src="../unrawheel.js"></script>
+      <script type="module" src="main.js"></script>
+   </head>
+   <body>
+      <div class="info">
+         <h1>UnraWheel.js</h1>
+         <ol>
+            <li>Press <b>[Backspace]</b>, click the section with the arrow, or navigate to it with the tab key and press <b>[Enter]</b> to go back</li>
+            <li>Press the key shown near the root of the section, click the section, or navigate to it with the tab key and press <b>[Enter]</b> to select it</li>
+         </ol>
+         <p>Check the console to see logs of selected values</p>
+      </div>
+      <div class="wheel-container">
+         <!--
+            * Valid attributes:
+
+            @attribute {number} [section-count] - number of sections (one additional section will be added for the back button)
+               required if dynamic-section-count isn't set
+            @attribute {boolean} [dynamic-section-count] - set to make section count non-static
+            @attribute {string} [data] - JSON string of section data
+            @attribute {boolean} [auto-lock] - set to automatically lock wheel when user makes a selection
+               and unlock it when new sections are set
+         -->
+         <!-- * Note: you can provide the initial data in the 'data' attribute here if you want -->
+         <unrawheel-v1
+            section-count="5"
+            auto-lock
+         ></unrawheel-v1>
+      </div>
+   </body>
+</html>

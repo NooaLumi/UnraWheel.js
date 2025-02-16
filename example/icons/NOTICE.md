@@ -1,0 +1,1 @@
+Icons in this folder are from https://game-icons.net by Skoll, [Lorc](https://lorcblog.blogspot.com) and [Delapouite](https://delapouite.com/), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/)
